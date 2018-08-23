@@ -21,6 +21,12 @@ module.exports = function(server) {
 
   /* GET all customers. */
   router.get('/staff', function (req, res, next) {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+
     var db = require('../config/database');
     var Customer = db.Mongoose.model('staff', db.CustomerSchema, 'staff');
     Customer.find({}).lean().exec(function(e,docs){
