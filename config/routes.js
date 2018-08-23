@@ -20,7 +20,7 @@ module.exports = function(server) {
   bagService.register(router, '/bag');
 
   /* GET all customers. */
-  router.get('/customers', function (req, res, next) {
+  router.get('/staff', function (req, res, next) {
     var db = require('../config/database');
     var Customer = db.Mongoose.model('staff', db.CustomerSchema, 'staff');
     Customer.find({}).lean().exec(function(e,docs){
