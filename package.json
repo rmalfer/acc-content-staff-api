@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loader.js",
+  "scripts": {
+    "start": "node loader.js",
+    "watch": "nodemon loader.js && mongod"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmalfer/acc-content-staff-api.git"
+  },
+  "author": "Thiago Luiz",
+  "license": "ISC",
+  "homepage": "https://github.com/rmalfer/acc-content-staff-api#readme",
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "express": "4.15.3",
+    "mongoose": "5.0.9",
+    "node-restful": "0.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "1.14.11"
+  }
+}
