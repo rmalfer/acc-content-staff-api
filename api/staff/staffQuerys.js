@@ -1,16 +1,15 @@
-const Item = require('./item');
+const Staff = require('./staff');
 
 const searchByName = (req, res, next) => {
     const urlParameter = req.params.name;
     // Find the objet by name
-    Item.find({'name' : urlParameter}, (err, item) => {
+    Staff.find({'name' : urlParameter}, (err, staff) => {
         if (err) {
             return handleError(err);
         } else {
-            res.json(item);
+            res.json(staff);
         }
     });
 };
 
 module.exports = { searchByName }
-

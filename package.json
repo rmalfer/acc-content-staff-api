@@ -2,11 +2,10 @@
   "name": "project",
   "version": "1.0.0",
   "description": "",
-  "main": "loader.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node loader.js",
-    "watch": "nodemon loader.js && mongod"
-
+    "start": "nodemon app.js",
+    "watch": "nodemon app.js && mongod"
   },
   "repository": {
     "type": "git",
